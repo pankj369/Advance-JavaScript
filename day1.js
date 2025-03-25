@@ -74,7 +74,7 @@
 // console.log(x); // 10
 //what happens internally
 //?Execution phase = Js runs the code line by line. variables assigned later get their values. and if we try to access "let" or "const" before declaration, it throws a referenceError dur to the TDZ.
-//*Hoistin withg function:- Functions declared are fully hoisted , meaning you can call them before they are declared.
+//*Hoisting withg function:- Functions declared are fully hoisted , meaning you can call them before they are declared.
 // example:-
 // greet(); // ✅ Output: Hello, John!
 
@@ -224,7 +224,7 @@
 //!What is the Temporal Dead Zone (TDZ)?
 //?The temporal Dead Zone is the time between when a variable is declared using let or const and when it is initialized with a value.During this period, trying to access the variable results in a referenceError. for example:-
 console.log(x); //reference Error:cannot access "x" before initialization
-let x=20;
+let x = 20;
 console.log(x);//output:20
 //here why does this happen?==> The variable x exists but is in the Temporal Dead Zone until it is initialized (x=20).
 //Accessing it before initialization throws a referenceError.
