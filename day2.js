@@ -67,7 +67,7 @@
 // ? JS cannot fix this issue because changing typeof null to return "null" would break existing websites and applications.However, modern Js programmers are aware of this bug and use better null-checking methods (like === null instead of typeof).
 // !How do you create a symbol in JavaScript, and why is it used?
 // ?A symbol in js is a unique and immutable primitive data-type introduced in ES6. It is mainly used to create unique property keys to prevent naming conflicts in objects.
-// //how to create a symbol 
+// //how to create a symbol
 // const mySymbol = Symbol();
 // console.log(mySymbol);
 // !What is NaN in JavaScript, and how can you check if a value is NaN?
@@ -77,7 +77,7 @@
 // console.log(parseInt("Hello")); // NaN (Cannot convert "Hello" to a number)
 // //console.log(parseInt("56"));
 //*How to check if a value is NaN?
-//?JS provides multiple way to check for NaN, but some methods are more reliable than others. 
+//?JS provides multiple way to check for NaN, but some methods are more reliable than others.
 // 1. method is : Number.isNaN() = ES6  introduced this, which only returns true if the value is actually NaN and does not perform type conversion.
 // console.log(Number.isNaN(123)); // false
 // console.log(Number.isNaN("Hello")); // false (Unlike `isNaN`, it does not convert)
@@ -115,7 +115,7 @@
 // !How do you convert a string into a number in JavaScript?
 // ?JavaScript provides multiple ways to convert a string ("123") into a number (123). Here are the most common methods:
 //* 1. using Number()
-//?Safest way to convert a string to a number. It works with integers and decimals. 
+//?Safest way to convert a string to a number. It works with integers and decimals.
 // console.log(Number("123"));    // 123  (Number)
 // console.log(Number("123.45")); // 123.45 (Number)
 // console.log(Number("ABC"));    // NaN  (Not a Number, because "ABC" is not numeric)
@@ -157,7 +157,7 @@
 // console.log(Object.prototype.toString.call({}));         // ❌ "[object Object]"
 //!What is the difference between parseInt(), parseFloat(), and Number()?
 //?These three functions are used to convert values into numbers in Js, but they work differently..
-//?1.parseInt()-converts to an integer==extracts an integer(whole number) from a string.,ignores non-numberic characters after the number,does not round, just removes decimals, supports radix 
+//?1.parseInt()-converts to an integer==extracts an integer(whole number) from a string.,ignores non-numberic characters after the number,does not round, just removes decimals, supports radix
 // console.log(parseInt("42"));       // ✅ 42 (integer)
 // console.log(parseInt("42.99"));    // ✅ 42 (removes decimal)
 // console.log(parseInt("42px"));     // ✅ 42 (ignores "px")
@@ -192,3 +192,53 @@
 // console.log("20" / 4);   // ✅ 5  (String "20" converted to Number)
 // console.log("15" % 4);   // ✅ 3  (String "15" converted to Number)
 //*Here, JS does not concatenate.Instead, it converts the string to a number and performs the arithmetic operation.
+
+//*======================================================================
+//!What is type coercion in javascript?
+//!What is implicit vs. explicit type conversion?
+//?Type coercion is the automatic conversion of "values" from one data type to another
+//? There are two types of coercion in JavaScript: implicit and explicit. Implicit coercion happens automatically, while explicit coercion is done manually by the programmer.
+// for example of implicit
+
+//for example of explicit
+
+// ! What happens if you use  + between a number and a string?
+//?When we use  + operator btween a number and a string, + operators prefers string concatenation, when atleast one operand is a string.
+//eg
+// console.log("01"+12);
+
+// ! what is "5"-2 in js, and why?
+//?here - operator forces umeric conversion when one operand is a string.so when the operation is mathematical (-,*,/), Js tries to convert string to numbers.
+//!what is null +5 in Javascript?
+//? here null + 5 return 5.
+// console.log(null+5);
+// ! what is true +1?
+// ? returns 2
+// console.log(true+1)
+//!What is undefined + 5 in JavaScript?
+// console.log(undefined+5); retruns not a numbeR;
+// !Why does "5" + 2 return "52" while "5" - 2 returns 3?
+//?When we use "5"+2 we will get output 52 because here + operator prefers string concatenation, when atleast one operand is a string.while when we use "5"-2, it returns output as 3 beacuse - operator forces numeric conversion when one operand is a string.
+
+//!What happens when you compare null == 0 and null >= 0?
+// console.log(null==0); //returns false
+// console.log(null>=0);//retruns true
+//!How can you force a value to be a number in JavaScript?
+//?
+// !What is the output of typeof NaN?
+//?it returns number
+// console.log(typeof NaN)
+// !What happens when you use typeof on an array?
+// ?here we get object as a return.
+// !How do you check if two objects are equal in JavaScript?
+//?
+let obj1={
+  name:"pnkj",
+  age:23
+}
+let obj2={
+  name:"pankj",
+  age:24
+}
+
+console.log(obj1===obj2)
