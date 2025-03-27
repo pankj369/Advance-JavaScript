@@ -68,13 +68,13 @@
 //*How does variable hoisting work?
 //? Here's a step-by-step explanation of how variable hoisting works:
 // ?Hoisiting works in two pahse during javascript execution:- 1.Memory creation phase(compilation phase) 2.Exection phase(code execution) 
-//? Memory creation phase==> Before the code runs, JavaScript scan the code and reserves memory for variables and functions. (.)"var" varibales are hosted with undefined value while "let" and "const" variables are hoisted but remain in the temporal dead zone (TDZ). (.)Functions declarations are fully hoisted (moved to the top).
+//? Memory creation phase==> Before the code runs, JavaScript scan the code and reserves memory for variables and functions. (.)"var" varibales are hosted with undefined value while "let" and "const" variables are hoisted but remain in the temporal dead zone (TDZ). (.)Functions declarations are fully hoisted (moved to the top).like greet()
 // console.log(x); // undefined
 // var x = 10; //hoisted to the top (declared) and initialised with undefined
 // console.log(x); // 10
 //what happens internally
 //?Execution phase = Js runs the code line by line. variables assigned later get their values. and if we try to access "let" or "const" before declaration, it throws a referenceError dur to the TDZ.
-//*Hoisting withg function:- Functions declared are fully hoisted , meaning you can call them before they are declared.
+//*Hoisting with function:- Functions declared are fully hoisted , meaning you can call them before they are declared.
 // example:-
 // greet(); // ✅ Output: Hello, John!
 
@@ -106,7 +106,7 @@
 // }
 // greet();
 // console.log(name);// here we get referenceError: name is not defined
-//?Block-scope==> A variable that declared with "let" and "const" inside a bloc({}) like if,for,while are called block scope. THey cannot be accessed outside the block.only accessible within the block where they are declared.it exist only within {} and deleted when the block finishes executing. Note:- var ignores the block scope
+//?Block-scope==> A variable that declared with "let" and "const" inside a block({}) like if,for,while are called block scope. THey cannot be accessed outside the block.only accessible within the block where they are declared.it exist only within {} and deleted when the block finishes executing. Note:- var ignores the block scope
 // //eg:-
 // {
 //   let a=10;
@@ -157,7 +157,7 @@
 // var name="pnkj";
 // console.log(name);//output:pnkj
 //here what exactly happens:- js hoists var name; to the top , but it doesn't assign pnkj immediately. instead, it initializes name with undefined before execution.
-//?2. let and const==> if we access "let" and "const" before declaring it, they are alos hoisted but they do not get undefined. Instead ,they remain in the temporal dead zone until they are initialize. if we try to access them before declaration, JavaScript throws a ReferenceError. for example:-
+//?2. let and const==> if we access "let" and "const" before declaring it, they are also hoisted but they do not get undefined. Instead ,they remain in the temporal dead zone until they are initialize. if we try to access them before declaration, JavaScript throws a ReferenceError. for example:-
 // console.log(name);//ReferenceError: name is not defined
 // let name="pnkj";
 // console.log(name);//output:pnkj
