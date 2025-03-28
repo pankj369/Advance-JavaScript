@@ -168,111 +168,100 @@ const { constants } = require("crypto");
 // console.log(null||undefined||5);
 // ?here null and undefined are falsy value so it returns 5 as it is truthy value
 //! What is the output of console.log(5 && "hello") and why? 
-console.log(5&&"hello");
+// console.log(5&&"hello");
 //! What is the output of console.log("" && 10)? 
-console.log(""&&10);
+// console.log(""&&10);
 // ? here "" is falsy, so it is returned immediately.
-// What are bitwise operators in JavaScript? 
+//! What are bitwise operators in JavaScript? 
+// ?Bitwise operators are used to perform operations on binary values.They perform operations at bit level.
+//! What is the difference between & and &&? 
+// ?& is a bitwise AND operator it works on individual bits.
+// for example
+// console.log(1 & 1); // 1
+// ? while && is a logical AND operator. and works with boolean logic.
+// for example
+// console.log(1 && 1); // 1
+// console.log(true&& false);
+//! How does the bitwise NOT ~ operator work? 
+// ?It inverts all bits and adds 1 to the result.
+// console.log(~5);
+//?it returns -6 because 5 is 0101 in binary and ~5 is 1010 in binary
+//! What is the output of console.log(~5) and why? 
+//?it returns -6 because 5 is 0101 in binary and ~5 is 1010 in binary
+//! How does << (left shift) and >> (right shift) work? 
 
-// What is the difference between & and &&? 
+//! What is the difference between >> and >>>?
 
-// How does the bitwise NOT ~ operator work? 
+//! What is the result of console.log(5 & 3)? 
 
-// What is the output of console.log(~5) and why? 
-
-// How does << (left shift) and >> (right shift) work? 
-
-// What is the difference between >> and >>>? 
-
-// What is the result of console.log(5 & 3)? 
-
- 
-
-// 7️⃣ Ternary Operator 
-
-// ✅ Covers: condition ? expr1 : expr2 
-
-// Basic Questions 
-
-// What is the ternary (? :) operator in JavaScript? 
-
-// How does it work with multiple conditions? 
-
-// How can you replace an if-else statement with a ternary operator? 
-
-// What is the result of: 
-
-// js 
-
-// CopyEdit 
-
+//! What is the ternary (? :) operator in JavaScript? 
+//?The ternary operator is a conditional operator that takes three operands: a condition, a value if the condition is true, and a value if the condition is false.It is a shorthand for if-else statements.
+// let age = 12;
+// let result =age>=18 ? "Adult" : "kid";
+//// console.log(age>=18 ? "Adult" : "kid");
+// console.log(result);
+//! How does it work with multiple conditions? 
 // let result = (5 > 3) ? "Yes" : "No"; 
 // console.log(result); 
- 
-
-// What is the output of: 
-
-// js 
-
-// CopyEdit 
 
 // console.log(null ? "Hello" : "Bye"); 
-// console.log(0 ? "True" : "False"); 
- 
-
- 
-
-// 8️⃣ Special Operators 
-
-// ✅ Covers: typeof, instanceof, delete, void, in 
-
-// Basic Questions 
-
-// What does the typeof operator do? 
-
-// What is the output of typeof NaN and why? 
-
-// How does instanceof work? 
-
-// What is the difference between typeof and instanceof? 
-
-// What happens when you use the delete operator on an object property? 
-
-// What does the void operator do? 
-
-// What is the purpose of the in operator? 
-
-// What is the result of: 
-
-// js 
-
-// CopyEdit 
-
+// console.log(0 ? "True" : "False");
+//! How can you replace an if-else statement with a ternary operator? 
+// let age = 12;
+// if (age >= 18) {
+//   console.log("adult");
+// } else {
+//   console.log("kid");
+// } 
+// //Ternary operator
+// let result = age >= 18 ? "adult" : "kid";
+// console.log(result);
+//! What does the typeof operator do?
+// ?typeof operator returns the type of the variable. It can be used to check the type of a variable.
+// console.log(typeof 5); // "number"
+// console.log(typeof "hello"); // "string"
+// console.log(typeof true); // "boolean"
+// console.log(typeof null); // "object"
+//! What is the output of typeof NaN and why? 
+// console.log(typeof NaN); // "number"
+//?NaN is a special value that represents "Not a Number". It is a numeric value that is not a valid number. It is often used in JavaScript to represent an error condition. It is a number, so typeof returns "number". 
+// !How does instanceof work? 
+// ?Instanceof operator is used to check if an object is an instance of a class. It returns true if the object is an instance of the class, and false otherwise.
+// console.log("hello" instanceof String);// false because "hello" is not an instance of String, it is a primitive data type
+// console.log(5 instanceof Number);// false because 5 is not an instance of Number, it is a primitive data type
+// console.log(true instanceof Boolean);//false 
+// console.log([] instanceof Array);//true
+// console.log({} instanceof Object);//true
+//!What is the difference between typeof and instanceof? 
+//? typeof is an operator used to check the data type of a variable. while instanceof is also an operator but used to check object prototype inheritance.
+//! What happens when you use the delete operator on an object property? 
+//?when we use delete operator it will delete the items from an object.
+//  for example
+// let obj={ name: "Pankaj", age: 30};
+// delete obj.age;
+// console.log(obj); 
+//! What does the void operator do? 
+//?It returns undefined no matter what.
+// console.log(void 0);
+// console.log(void "hello");
+//! What is the purpose of the in operator? 
+//?It checks if a property exists in an object.
+let obj = { name: "John", age: 30 }; 
+console.log('name' in obj);
+console.log('salary' in obj);
+// !What is the result of: 
 // let obj = { name: "John", age: 30 }; 
 // console.log("name" in obj); 
 // console.log("salary" in obj); 
- 
-
- 
-
-// 🔥 Expert-Level Questions 
-
-// What is the result of: 
-
-// js 
-
-// CopyEdit 
-
 // console.log("5" + 2); 
 // console.log("5" - 2); 
 // console.log(5 + true); 
 // console.log(5 - true); 
 // console.log(5 + null); 
 // console.log(5 + undefined); 
- 
 
-// Why does true + true return 2? 
+//! Why does true + true return 2? 
 
-// How does JavaScript handle "" + 1 + 1 and 1 + 1 + ""? 
+// !How does JavaScript handle "" + 1 + 1 and 1 + 1 + ""? 
 
-// How does operator precedence work in JavaScript? 
+// !How does operator precedence work in JavaScript? 
