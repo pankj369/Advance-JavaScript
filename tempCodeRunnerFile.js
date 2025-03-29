@@ -1,2 +1,2 @@
-;
-// console.log(arr1===arr3);
+);
+console.log(1 && "World");

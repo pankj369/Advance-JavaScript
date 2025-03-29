@@ -1,5 +1,5 @@
-/*1️⃣ Basics of Control Statements
-✅ Covers: if, if-else, else-if, switch, break, continue, return*/
+// 1️⃣ Basics of Control Statements
+// ✅ Covers: if, if-else, else-if, switch, break, continue, return*/
 
 // Basic Questions
 //!What are control statements in JavaScript? Why are they used?
@@ -145,112 +145,143 @@
 // ?Switch statements handle strict comparison (===) by comparing the value and type of the variable.
 // 4️⃣ Loop Control Statements – break and continue
 // ✅ Covers: Breaking loops, skipping iterations
-/*
+
 // Advanced Questions
-What is the difference between break and continue?
+// !What is the difference between break and continue?
+//?Break statement is used to exit a loop or switch statement. Continue statement is used to skip the current iteration of a loop.
+// !What happens if we use break inside a loop?
+//?Break statement is used to exit a loop or switch statement.so when we use break inside a loop it will break the loop.
+//!What will be the output of:
+//?here i is less than 5 so it will print 0,1,2,3,4 but when i is 2 it will break the loop.
+// for (let i = 0; i < 5; i++) {
+//     if (i === 2) break;
+//     console.log(i); //output: 0,1
+// }
+//! What happens if we use continue inside a loop?
+//? when we use continue inside a loop it will skip the current iteration of a loop.
+// !What will be the output of:
+//? here i is less than 5 so it will print 0,1,2,3,4 but when i is 2 it will skip the current iteration of a loop.
+// for (let i = 0; i < 5; i++) {
+//     if (i === 2) continue;
+//     console.log(i); //output: 0,1,3,4
+// }
+// !Can we use break inside a nested loop?
+//?Yes, we can use break inside a nested loop.
+// for example
+// for (let i = 0; i <3; i++) {
+//     for (let j = 0; j < 3; j++) {
+//         if (j === 1) break;
+//         console.log(i, j);
+//     }
+// } 
+//?here i is less than 3 so it will print 0,1,2 but when j is 1 it will break the loop.
 
-What happens if we use break inside a loop?
+// !Can we use continue inside a nested loop?
+//?Yes, we can use continue inside a nested loop.
+// for example
+// for (let i = 0; i <3; i++) {
+//     for (let j = 0; j < 3; j++) {
+//         if (j === 1) continue;
+//         console.log(i, j);
+//     }
+// }
+// ?here i is less than 3 so it will print 0,1,2 but when j is 1 it will skip the current iteration of a loop.
+// !How do labeled break and continue work?
+// outerLoop: for (let i = 0; i < 3; i++) {
+//     for (let j = 0; j < 3; j++) {
+//         if (j === 1) break outerLoop;
+//         console.log(i, j);
+//     }
+// }
+//?here i is less than 3 so it will print 0,1,2 but when j is 1 it will break the loop and break the outer loop.
+// !When should we use break vs. return in a loop?
+//?
+// 5️⃣ return Statement in JavaScript
+// ✅ Covers: Exiting functions, differences from break
 
-What will be the output of:
+// Expert Questions
+// !What is a return statement, and where is it used?
+//?return statement is used to exit a function and return a value.It is used to return a value from a function.
+// !What happens when we use return inside a function?
+//?when we use return inside a function, it will exit the function and return a value.
+// !What is the difference between return and break?
+//?return is used to exit a function while break is used to exit a loop.
+//?if we use return inside a loop it will exit the loop and return a value.
+// !What will be the output of:
+// function test() {
+//     console.log("Before return"); //this will be the output
+//     return;
+//     console.log("After return");
+// }
+// test();
+//! Can we use return inside a loop? What happens?
+//?Yes, we can use return inside a loop. so when we use return inside a loop it will exit the loop and return a value.
+//for example
+// function test() {
+//     for (let i = 0; i < 3; i++) {
+//         if (i === 1) return;
+//         console.log(i);
+//         }
+//         console.log("After loop");
+//         }
+//         test();
+// !What will be the output of:
+// function checkNumber(num) {
+//     if (num > 0) return "Positive";
+//     else if (num < 0) return "Negative";
+//     else return "Zero";
+// }
+// console.log(checkNumber(5));
+// !What happens if a function has no return statement?
+// ?if a function has no return statement, it will return undefined.
+// 6️⃣ Advanced Control Statement Scenarios
+// ✅ Covers: Error handling, edge cases
 
-js
-Copy code
-for (let i = 0; i < 5; i++) {
-    if (i === 2) break;
-    console.log(i);
-}
-What happens if we use continue inside a loop?
+// Expert Questions
+// !What happens if we accidentally write an assignment (=) instead of comparison (==) in an if statement?
+//?if we accidentally write an assignment (=) instead of comparison (==) in an if statement, it will be treated as a comparison and it will always return true.
 
-What will be the output of:
-
-js
-Copy code
-for (let i = 0; i < 5; i++) {
-    if (i === 2) continue;
-    console.log(i);
-}
-Can we use break inside a nested loop?
-
-Can we use continue inside a nested loop?
-
-How do labeled break and continue work?
-
-js
-Copy code
-outerLoop: for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-        if (j === 1) break outerLoop;
-        console.log(i, j);
-    }
-}
-When should we use break vs. return in a loop?
-
-5️⃣ return Statement in JavaScript
-✅ Covers: Exiting functions, differences from break
-
-Expert Questions
-What is a return statement, and where is it used?
-
-What happens when we use return inside a function?
-
-What is the difference between return and break?
-
-What will be the output of:
-
-js
-Copy code
-function test() {
-    console.log("Before return");
-    return;
-    console.log("After return");
-}
-test();
-Can we use return inside a loop? What happens?
-
-What will be the output of:
-
-js
-Copy code
-function checkNumber(num) {
-    if (num > 0) return "Positive";
-    else if (num < 0) return "Negative";
-    else return "Zero";
-}
-console.log(checkNumber(-5));
-What happens if a function has no return statement?
-
-6️⃣ Advanced Control Statement Scenarios
-✅ Covers: Error handling, edge cases
-
-Expert Questions
-What happens if we accidentally write an assignment (=) instead of comparison (==) in an if statement?
-
-What will be the output of:
-
-js
-Copy code
-let x = 0;
-if (x = 10) {
-    console.log("True");
-} else {
-    console.log("False");
-}
-What is short-circuiting in JavaScript control statements?
-
-What is the output of:
-
-js
-Copy code
+// !What will be the output of:
+// let x = 0;
+// if (x = 10) {
+//     console.log("True");
+// } else {
+//     console.log("False");
+// }
+//! What is short-circuiting in JavaScript control statements?
+//?Short-circuiting is a feature in JavaScript that allows us to evaluate multiple conditions in a single if statement.It is used to avoid evaluating unnecessary conditions.It is used when we have a large number of conditions to check.
+// for example
+// if (a && b && c) {
+//     console.log("All conditions are true");
+//     } else {
+//         console.log("At least one condition is false");
+//         }
+// !What is the output of:
 console.log(0 || "Hello");
 console.log(1 && "World");
-How can we avoid deeply nested if-else statements?
-
-What are guard clauses, and how do they improve if-else code?
-
-How does try-catch work as a control statement in JavaScript?
-
-📌 Conclusion
-Agar ye 50+ questions samajh lete ho, toh tum JavaScript control statements ke expert ban jaoge! 🎯🔥
-💡 Interview me koi bhi control statements ka question aaye, tum confidently answer kar paoge!
-
-Agar kisi bhi question ka answer chahiye ho ya koi concept samajhna ho, toh batao! 😊*/
+//? this is beacuse 0 is falsy so it will return "Hello" and "World" is truthy so it will return "World".
+// !How can we avoid deeply nested if-else statements?
+//? we can use guard clauses to avoid deeply nested if-else statements.
+//! What are guard clauses, and how do they improve if-else code?
+//?Guard clauses are used to avoid deeply nested if-else statements.it is used to check if a condition is true or false. it improve the if-else code by making it easier to read and understand.
+//example
+// if (a > 0) {
+//     if (b > 0) {
+//         if (c > 0) {
+//             console.log("All conditions are true");
+//             }
+//             }
+//             }
+//             // can be written as
+//             if (a > 0 && b > 0 && c > 0) {
+//                 console.log("All conditions are true");
+//                 }
+                
+// !How does try-catch work as a control statement in JavaScript?
+//?try-catch is a control statement in JavaScript that allows us to handle errors in our code.it is used to catch errors that may occur in our code.    
+// example
+// try {
+//     // code that may throw an error
+// } catch (error) {
+//     // code to handle the error
+// }
