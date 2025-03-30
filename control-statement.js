@@ -257,8 +257,8 @@
 //         console.log("At least one condition is false");
 //         }
 // !What is the output of:
-console.log(0 || "Hello");
-console.log(1 && "World");
+// console.log(0 || "Hello");
+// console.log(1 && "World");
 //? this is beacuse 0 is falsy so it will return "Hello" and "World" is truthy so it will return "World".
 // !How can we avoid deeply nested if-else statements?
 //? we can use guard clauses to avoid deeply nested if-else statements.
@@ -285,3 +285,57 @@ console.log(1 && "World");
 // } catch (error) {
 //     // code to handle the error
 // }
+// *==========================================================================================================================
+//additional question
+//! if a person is greater than 18 yr old or 18, a citizen and registered to vote, display a message saying they are eligible to vote.;
+
+//!if a person is younger than 18, not a citizen, or not registered to vote, display a message saying they are not eligible to vote
+
+// !if a person is 18 or older, but not a citizen, display a message saying they are not eligible due to citizenship status
+
+//!if a person is 18 or above, a citizen but not registered to vote , display a message saying they are not eligible due to registration status   
+
+//user's input
+let age=12;
+let isCitizen=true;
+let isRegisteredToVote=true;
+// nested if
+// if(age>=18){
+//   if(isCitizen){
+//     if(isRegisteredToVote){
+//       console.log("Eligible to vote");
+//     }else{
+//       console.log('not eligible due to registrationship status');
+//     }
+//   }else{
+//     console.log('Not eligible due to citizenship status');
+//   }
+// }else{
+// console.log("not eligible to vote");
+// }
+
+//!write a program to check, if a number is prime?
+// let num=43;
+// let isPrime=true;
+
+// for(let i=2; i<num;i++){
+//   if(num% i===0){
+//     isPrime=false;
+//     break;
+//   }
+//  }
+//  if(isPrime){
+//   console.log("Number is prime");
+//  }else{
+//   console.log('Number is not Prime');
+//  }
+
+// !Write a program to check a number is +ve, -ve, or 0;
+let num=-2;
+if(num===0){
+  console.log("Number is Zero/0")
+}else if(num>0){
+  console.log("Number is positive")
+}else{
+  console.log("Number is negative");
+}
