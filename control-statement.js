@@ -331,11 +331,57 @@ let isRegisteredToVote=true;
 //  }
 
 // !Write a program to check a number is +ve, -ve, or 0;
-let num=-2;
-if(num===0){
-  console.log("Number is Zero/0")
-}else if(num>0){
-  console.log("Number is positive")
-}else{
-  console.log("Number is negative");
+// let num=-2;
+// if(num===0){
+//   console.log("Number is Zero/0")
+// }else if(num>0){
+//   console.log("Number is positive")
+// }else{
+//   console.log("Number is negative");
+// }
+//! Explain how the switch statement works and what will be the output when the variable day is set to different values.
+
+// let day = "Friday";
+
+// switch (day) {
+//   case "Monday":
+//     console.log("today is monday");
+//     break;
+
+//   case "Friday":
+//     console.log("omg lets have party today");
+//     break;
+
+//   case "Sunday":
+//     console.log("Lets go to movie");
+//     break;
+
+//   default:
+//     console.log("no condition match");
+// }
+//! Write a JavaScript switch statement that takes a variable areaOfShapes representing different shapes, and based on its value, calculates and logs the area of the corresponding shape. Consider three shapes: 'Rectangle,' 'Circle,' and 'Square.' For 'Rectangle,' use variables a and b as the sides; for 'Circle,' use a variable r as the radius; and for 'Square,' use variable a as the side length. If the provided shape is not recognized, log a message saying, 'Sorry the shape is not available.' Test your switch statement with areaOfShapes set to 'Square' and sides a and b set to 5 and 10, respectively. Ensure that the correct area (25 in this case) is logged to the console.
+
+var areaOfShapes = "square";
+var a = 5;
+var b = 10;
+var result;
+switch (areaOfShapes) {
+  case "square":
+    result = a * a;
+    console.log(result);
+    break;
+
+  case "rectangle":
+    result = a * b;
+    console.log(result);
+    break;
+
+  case "circle":
+    var r = 2;
+    result = 3.142 * (r * r);
+    console.log(result);
+    break;
+
+  default:
+    console.log("No shape matches");
 }
