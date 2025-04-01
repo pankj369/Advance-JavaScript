@@ -361,27 +361,45 @@ let isRegisteredToVote=true;
 // }
 //! Write a JavaScript switch statement that takes a variable areaOfShapes representing different shapes, and based on its value, calculates and logs the area of the corresponding shape. Consider three shapes: 'Rectangle,' 'Circle,' and 'Square.' For 'Rectangle,' use variables a and b as the sides; for 'Circle,' use a variable r as the radius; and for 'Square,' use variable a as the side length. If the provided shape is not recognized, log a message saying, 'Sorry the shape is not available.' Test your switch statement with areaOfShapes set to 'Square' and sides a and b set to 5 and 10, respectively. Ensure that the correct area (25 in this case) is logged to the console.
 
-var areaOfShapes = "square";
-var a = 5;
-var b = 10;
-var result;
-switch (areaOfShapes) {
-  case "square":
-    result = a * a;
-    console.log(result);
-    break;
+// var areaOfShapes = "square";
+// var a = 5;
+// var b = 10;
+// var result;
+// switch (areaOfShapes) {
+//   case "square":
+//     result = a * a;
+//     console.log(result);
+//     break;
 
-  case "rectangle":
-    result = a * b;
-    console.log(result);
-    break;
+//   case "rectangle":
+//     result = a * b;
+//     console.log(result);
+//     break;
 
-  case "circle":
-    var r = 2;
-    result = 3.142 * (r * r);
-    console.log(result);
-    break;
+//   case "circle":
+//     var r = 2;
+//     result = 3.142 * (r * r);
+//     console.log(result);
+//     break;
 
-  default:
-    console.log("No shape matches");
-}
+//   default:
+//     console.log("No shape matches");
+// }
+
+//! Question: Explain the purpose of the code. What is it calculating based on the values of areaOfShapes, a, and b?
+//? The code calculates and logs the area of different shapes (rectangle, circle, square) based on the value of the areaOfShapes variable.
+
+//! Question: What will be the output if areaOfShapes is set to "Square" and why?
+//? The output will be the square of the variable a (25) since the case matches "Square."
+
+//! Question: Why is there a break statement after each case in the switch statement?
+//? The break statement is used to exit the switch statement after the corresponding case is executed, preventing fall-through to subsequent cases.
+
+//! Question: If areaOfShapes is set to "Circle," what will be logged to the console, and why is the variable r defined within the case block?
+//? The output will be the area of a circle with radius r (28.26) since the case matches "Circle," and r is defined within the case block.
+
+//! Question: What will happen if areaOfShapes is set to a shape that is not covered by any of the existing case statements?
+//? The default case logs "Sorry, the shape is not available" if areaOfShapes is set to a shape not covered by any existing case.
+
+//! Question: How does the switch statement handle the flow of control based on the value of areaOfShapes?
+//? The switch statement evaluates the value of areaOfShapes and executes the code block corresponding to the matching case. The break statements ensure that only the relevant code block is executed.
